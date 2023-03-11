@@ -12,44 +12,154 @@
       .jumbotron {
         opacity: 0.7;
         background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
       }
+      .text-block {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background-color: black;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.floating-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 36px;
+	text-align: center;
+	z-index: 1;
+}
+
+.button {
+	display: inline-block;
+	background-color: black;
+	color: white;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+      
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="floating-text">
       <div class="row ">
         <div class="col">
           <div class="jumbotron">
             <div class="row">
-              <div class="col-xs-2">
-                <img class="img-responsive" src="resources/logo.jpeg">
-              </div>
-              <div class="col-xs-8">
-                <h1>The Reading Circle</h1>
-                <p>Experience the joy of reading with The Reading Club - where every book is a new adventure!</p>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">Login</h3>
-                  </div>
-                  <div class="panel-body">
-                    <form>
-                      <div class="form-group">
-                        <label for="username">Username:</label>
-                        <input type="text" class="form-control" id="username" name="username">
-                      </div>
-                      <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                      </div>
-                      <button type="submit" class="btn btn-primary">Login</button>
-                    </form>
-                  </div>
+                <div class="col-xs-2">
+                  <!-- <img class="img-responsive" src="resources/logo.jpeg"> -->
                 </div>
-              </div>
-            </div>
+                </div>
           </div>
         </div>
+    </div>
+
+    <div class="floating-text">
+        <!-- <div style="background-image: url('resources/book_login.jpeg'); background-size: cover; background-color: black; text-align: center;border: 2px solid white;"> -->
+          <h1 style="color: white;">A step towards wisdom</h1>
+          <div class="row">
+            <div class="col-xs-2">
+            </div>
+            <div class="col-xs-10">
+                <h3>Sign In</h3>
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+        <button class="button" onclick="window.location.href = 'login.html';" style="margin-top: 10px;">Let's begin</button>
+      </div>
+
+    </div>
       </div>
     </div>
   </body>
 </html>
+<!-- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+      body {
+        background-image: url("resources/book_login.jpeg");
+        background-size: cover;
+        background-position: center;
+      }
+      
+      .floating-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 36px;
+        text-align: center;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      .form-control:focus {
+        border-color: #3c8dbc;
+        box-shadow: none;
+      }
+
+      .button {
+        display: inline-block;
+        background-color: #3c8dbc;
+        color: #ffffff;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+
+      .button:hover {
+        background-color: #367fa9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating-text">
+      <h1>A step towards wisdom</h1>
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <button class="button" onclick="window.location.href = 'login.html';" style="margin-top: 10px;">Let's begin</button>
+    </div>
+  </body>
+</html> -->
+
